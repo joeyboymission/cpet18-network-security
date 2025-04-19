@@ -183,8 +183,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "889297ad140e9c80",
+  "active": "f445006cf3e13b2b",
   "lastOpenFiles": [
+    "lesson-topic/images/scenario3-switchportsec.png",
+    "lesson-topic/images/scenario2-switchportsec.png",
+    "lesson-topic/images/scenario1-switchportsec.png",
     "lesson-topic/Spanning Tree Protocol.md",
     "lesson-topic/Inter-VLAN Routing.md",
     "lesson-topic/Preliminary Exam.md",
