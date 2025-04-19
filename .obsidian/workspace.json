@@ -170,7 +170,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 218.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -183,7 +183,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f445006cf3e13b2b",
+  "active": "889297ad140e9c80",
   "lastOpenFiles": [
     "lesson-topic/images/scenario3-switchportsec.png",
     "lesson-topic/images/scenario2-switchportsec.png",
