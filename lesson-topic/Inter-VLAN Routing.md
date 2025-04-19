@@ -79,7 +79,7 @@ interface gig1/0
 **Notes**: Connect switch ports (e.g., COS Fa0/1) to router interfaces (e.g., UITC Gig0/0) for each VLAN. This method is rarely used today due to scalability limitations.
 
 ### Practical Example
-
+![[traditional-topology.png]]
 **Given**:
 
 **IP Address Range**:
@@ -314,33 +314,35 @@ A single router interface uses subinterfaces to route traffic between VLANs, wit
 - Simplifies cabling compared to Traditional but requires careful subinterface configuration.
 
 ### Practical Example
-
+![[routeronastick-topology.png]]
 **Given**:
+**IP Address Range**:
+- Overall Network: 10.10.10.0/24 (255.255.255.0)
+- VLAN 10: 10.10.10.0/26 (10.10.10.0–10.10.10.63)
+- VLAN 20: 10.10.10.64/26 (10.10.10.64–10.10.10.127)
+- VLAN 30: 10.10.10.128/26 (10.10.10.128–10.10.10.191)
 
-- **IP Address Range**:
-    - Overall Network: 10.10.10.0/24 (255.255.255.0)
-    - VLAN 10: 10.10.10.0/26 (10.10.10.0–10.10.10.63)
-    - VLAN 20: 10.10.10.64/26 (10.10.10.64–10.10.10.127)
-    - VLAN 30: 10.10.10.128/26 (10.10.10.128–10.10.10.191)
-- **Subnet Mask**: 255.255.255.192 (/26) for each VLAN
-- **Default Gateway (for PCs)**:
-    - VLAN 10: 10.10.10.50
-    - VLAN 20: 10.10.10.100
-    - VLAN 30: 10.10.10.130
-- **VLAN Groups**:
-    - VLAN 10: PC13, PC14 (LIBRARY); PC19, PC20 (CANTEEN); PC25, PC26 (REGISTRAR)
-    - VLAN 20: PC15, PC16 (LIBRARY); PC21, PC22 (CANTEEN); PC27, PC28 (REGISTRAR)
-    - VLAN 30: PC17, PC18 (LIBRARY); PC23, PC24 (CANTEEN); PC29, PC30 (REGISTRAR)
-- **Devices**:
-    - 18 PCs (PC13–PC18 on LIBRARY, PC19–PC24 on CANTEEN, PC25–PC30 on REGISTRAR)
-    - 1 Router (ADMIN)
-    - 3 Switches (LIBRARY, CANTEEN, REGISTRAR)
-- **Total Devices**: 22 (18 PCs + 1 Router + 3 Switches)
+**Subnet Mask**: 255.255.255.192 (/26) for each VLAN
+
+**Default Gateway (for PCs)**:
+- VLAN 10: 10.10.10.50
+- VLAN 20: 10.10.10.100
+- VLAN 30: 10.10.10.130
+
+**VLAN Groups**:
+- VLAN 10: PC13, PC14 (LIBRARY); PC19, PC20 (CANTEEN); PC25, PC26 (REGISTRAR)
+- VLAN 20: PC15, PC16 (LIBRARY); PC21, PC22 (CANTEEN); PC27, PC28 (REGISTRAR)
+- VLAN 30: PC17, PC18 (LIBRARY); PC23, PC24 (CANTEEN); PC29, PC30 (REGISTRAR)
+
+**Devices**:
+- 18 PCs (PC13–PC18 on LIBRARY, PC19–PC24 on CANTEEN, PC25–PC30 on REGISTRAR)
+- 1 Router (ADMIN)
+- 3 Switches (LIBRARY, CANTEEN, REGISTRAR)
+
+**Total Devices**: 22 (18 PCs + 1 Router + 3 Switches)
 
 **Topology Description**:
-
 **ADMIN (Router)**:
-
 - Gig0/0: No IP, trunk to CANTEEN Fa0/1, carrying VLANs 10, 20, 30
 - Subinterfaces:
     - Gig0/0.10: IP 10.10.10.50/26, VLAN 10
@@ -348,7 +350,6 @@ A single router interface uses subinterfaces to route traffic between VLANs, wit
     - Gig0/0.30: IP 10.10.10.130/26, VLAN 30
 
 **CANTEEN (Switch)**:
-
 - Fa0/1: Trunk to ADMIN Gig0/0, allowed VLANs 10, 20, 30
 - Fa0/2: Trunk to LIBRARY Fa0/1, allowed VLANs 10, 20, 30
 - Fa0/3: Trunk to REGISTRAR Fa0/1, allowed VLANs 10, 20, 30
@@ -360,7 +361,6 @@ A single router interface uses subinterfaces to route traffic between VLANs, wit
 - Fa0/9: To PC24 (access VLAN 30)
 
 **LIBRARY (Switch)**:
-
 - Fa0/1: Trunk to CANTEEN Fa0/2, allowed VLANs 10, 20, 30
 - Fa0/2: To PC13 (access VLAN 10)
 - Fa0/3: To PC14 (access VLAN 10)
@@ -370,7 +370,6 @@ A single router interface uses subinterfaces to route traffic between VLANs, wit
 - Fa0/7: To PC18 (access VLAN 30)
 
 **REGISTRAR (Switch)**:
-
 - Fa0/1: Trunk to CANTEEN Fa0/3, allowed VLANs 10, 20, 30
 - Fa0/2: To PC25 (access VLAN 10)
 - Fa0/3: To PC26 (access VLAN 10)
@@ -380,7 +379,6 @@ A single router interface uses subinterfaces to route traffic between VLANs, wit
 - Fa0/7: To PC30 (access VLAN 30)
 
 **PC IP Assignments**:
-
 - PC13 (VLAN 10, LIBRARY): 10.10.10.1/26, Gateway 10.10.10.50
 - PC14 (VLAN 10, LIBRARY): 10.10.10.62/26, Gateway 10.10.10.50
 - PC19 (VLAN 10, CANTEEN): 10.10.10.2/26, Gateway 10.10.10.50
@@ -401,9 +399,7 @@ A single router interface uses subinterfaces to route traffic between VLANs, wit
 - PC30 (VLAN 30, REGISTRAR): 10.10.10.188/26, Gateway 10.10.10.130
 
 **CLI Configuration**:
-
 **ADMIN Router**:
-
 ```plaintext
 configure terminal
 interface GigabitEthernet0/0
@@ -427,7 +423,6 @@ exit
 ```
 
 **CANTEEN Switch**:
-
 ```plaintext
 configure terminal
 vlan 10
@@ -468,7 +463,6 @@ exit
 ```
 
 **LIBRARY Switch**:
-
 ```plaintext
 configure terminal
 vlan 10
@@ -503,7 +497,6 @@ exit
 ```
 
 **REGISTRAR Switch**:
-
 ```plaintext
 configure terminal
 vlan 10
@@ -538,7 +531,6 @@ exit
 ```
 
 **Notes**:
-
 - The trunk between ADMIN and CANTEEN carries VLANs 10, 20, and 30, enabling the router to route traffic between these VLANs.
 - Trunks between CANTEEN and LIBRARY/REGISTRAR allow VLAN traffic to span multiple switches, ensuring PCs in the same VLAN across different switches communicate at Layer 2.
 - PCs use the router’s subinterface IP as their default gateway for Inter-VLAN communication.
@@ -558,10 +550,11 @@ A Layer 3 switch (multilayer switch) performs both Layer 2 switching and Layer 3
 - Supports advanced features like QoS, ACLs, and EtherChannel for increased bandwidth.
 - More expensive than Layer 2 switches but often more cost-effective than separate routers and switches.
 
+### Practical Example
+![[multilayer-topology.png]]
 **Given**:
 
 **IP Address Range**:
-
 - Overall Network: 172.16.150.0/22 (255.255.252.0)
 - VLAN 100: 172.16.148.0/22 (172.16.148.0–172.16.151.255)
 - VLAN 20: 172.16.152.0/22 (172.16.152.0–172.16.155.255)

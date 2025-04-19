@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "lesson-topic/Inter-VLAN Routing.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "README"
+              "title": "Inter-VLAN Routing"
             }
           }
         ]
@@ -156,13 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md",
+                "file": "lesson-topic/Inter-VLAN Routing.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of README"
+              "title": "Outline of Inter-VLAN Routing"
             }
           }
         ],
@@ -185,6 +185,14 @@
   },
   "active": "889297ad140e9c80",
   "lastOpenFiles": [
+    "README.md",
+    "lesson-topic/Subnetting.md",
+    "lesson-topic/Preliminary Exam.md",
+    "lesson-topic/images/traditional-topology.png",
+    "lesson-topic/images/routeronastick-topology.png",
+    "lesson-topic/images/multilayer-topology.png",
+    "lesson-topic/images",
+    "major-exams/images",
     "activities/Activity 6 - Switch Port Security.md",
     "activities/Activity 5 - Spanning Tree Protocol.md",
     "activities/Activity 4 - Inter-VLAN Routing.md",
@@ -197,7 +205,6 @@
     "lesson-topic/Preliminary Recap and Correction.md",
     "lesson-topic/Inter-VLAN Routing.md",
     "lesson-topic/Formula Card.md",
-    "README.md",
     "formula-card",
     "major-exams/prelim",
     "major-exams",
