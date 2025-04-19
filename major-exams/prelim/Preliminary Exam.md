@@ -1,1 +1,0 @@
-# Preliminary Recap and Connection
