@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "8f49f0157d9bd0f4",
+        "id": "e73fab0c3173621b",
         "type": "tabs",
         "children": [
           {
-            "id": "889297ad140e9c80",
+            "id": "a89a1a55fcc1d14a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "lesson-topic/Formula Card.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Formula Card"
+              "title": "New tab"
             }
           }
         ]
@@ -156,13 +152,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "lesson-topic/Formula Card.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Formula Card"
+              "title": "Outline"
             }
           }
         ],
@@ -183,8 +178,9 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "889297ad140e9c80",
+  "active": "a89a1a55fcc1d14a",
   "lastOpenFiles": [
+    "lesson-topic/Formula Card.md",
     "lesson-topic/Inter-VLAN Routing.md",
     "lesson-topic/Spanning Tree Protocol.md",
     "lesson-topic/Subnetting.md",
@@ -207,7 +203,6 @@
     "activities/Activity 1 - Physical and Technical Network Security.md",
     "major-exams/prelim/Preliminary Exam.md",
     "lesson-topic/Preliminary Recap and Correction.md",
-    "lesson-topic/Formula Card.md",
     "formula-card",
     "major-exams/prelim",
     "major-exams",
