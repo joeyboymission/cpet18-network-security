@@ -11,10 +11,14 @@
             "id": "a89a1a55fcc1d14a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "lesson-topic/DHCP Snooping.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "DHCP Snooping"
             }
           }
         ]
@@ -152,12 +156,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "lesson-topic/DHCP Snooping.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of DHCP Snooping"
             }
           }
         ],
@@ -178,8 +183,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "a89a1a55fcc1d14a",
+  "active": "38077e06495f40ed",
   "lastOpenFiles": [
+    "lesson-topic/images/dhcp-scenario2.png",
+    "lesson-topic/images/dhcp-scenario1.png",
+    "Pasted image 20250425200422.png",
     "lesson-topic/Formula Card.md",
     "lesson-topic/Inter-VLAN Routing.md",
     "lesson-topic/Spanning Tree Protocol.md",
