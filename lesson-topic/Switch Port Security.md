@@ -102,7 +102,7 @@ To monitor the status of Switchport Security and detect violations, use the foll
 This section provides hands-on examples of Switchport Security configurations using both static and dynamic (sticky) MAC address methods, demonstrating the three violation modes: Protected, Restricted, and Shutdown. These examples are designed to help you understand how to implement and test Switchport Security in a lab environment, such as in Cisco Packet Tracer, for your CPET18L - Network Security studies.
 
 ### Static Configuration
-![Static Configuration](../images/static-switchportsec.png)
+![Static Configuration](images/static-switchportsec.png)
 Static Configuration involves manually specifying the allowed MAC addresses on a switch port. The following examples use a network with the IP range 10.10.10.0/24 (Subnet Mask: 255.255.255.0) for Protected mode, and 192.168.0.0/24 and 172.25.150.0/24 for Restricted and Shutdown modes, respectively, as derived from the topology.
 
 #### Protected Mode
@@ -271,7 +271,7 @@ end
 - Use `show port-security interface FastEthernet0/1` or `show port-security interface FastEthernet0/2` to confirm the port is in "SecureDown" state after a violation. To recover, enter the interface and issue `shutdown` followed by `no shutdown`.
 
 ### Dynamic Configuration
-![Dynamic Configuration](../images/dynamic-switchportsec.png)
+![Dynamic Configuration](images/dynamic-switchportsec.png)
 Dynamic Configuration uses the "sticky" option to automatically learn MAC addresses. The following examples use a network with the IP range 10.10.10.0/24 for Protected mode, 192.168.250.0/24 for Restricted mode, and 172.25.150.0/24 for Shutdown mode, mirroring the Static Configuration topology but with updated device names.
 
 #### Protected Mode

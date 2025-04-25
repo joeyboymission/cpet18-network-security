@@ -31,7 +31,7 @@ DHCP Snooping is a Layer 2 security feature implemented on network switches to e
 ## Practical Example
 
 ### Scenario 1: Test Topology for DHCP
-![DHCP Scenario 1](../images/dhcp-scenario1.png)
+![DHCP Scenario 1](images/dhcp-scenario1.png)
 #### Objective
 
 Establish a baseline DHCP setup with a legitimate DHCP server to ensure proper IP assignment across multiple departments.
@@ -199,7 +199,7 @@ write
 ---
 
 ### Scenario 2: Test Topology for Rogue DHCP
-![DHCP Scenario 2](../images/dhcp-scenario2.png)
+![DHCP Scenario 2](images/dhcp-scenario2.png)
 #### Objective
 
 Test DHCP Snooping to ensure that, despite the presence of a rogue DHCP server, only the legitimate DHCP server assigns IPs to clients, protecting the network from unauthorized servers.

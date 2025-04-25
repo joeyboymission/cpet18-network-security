@@ -79,7 +79,7 @@ interface gig1/0
 **Notes**: Connect switch ports (e.g., COS Fa0/1) to router interfaces (e.g., UITC Gig0/0) for each VLAN. This method is rarely used today due to scalability limitations.
 
 ### Practical Example
-![Traditional Topology](../images/traditional-topology.png)
+![Traditional Topology](images/traditional-topology.png)
 **Given**:
 
 **IP Address Range**:
@@ -314,7 +314,7 @@ A single router interface uses subinterfaces to route traffic between VLANs, wit
 - Simplifies cabling compared to Traditional but requires careful subinterface configuration.
 
 ### Practical Example
-![Router on a Stick Topology](../images/routeronastick-topology.png)
+![Router on a Stick Topology](images/routeronastick-topology.png)
 **Given**:
 **IP Address Range**:
 - Overall Network: 10.10.10.0/24 (255.255.255.0)
@@ -551,7 +551,7 @@ A Layer 3 switch (multilayer switch) performs both Layer 2 switching and Layer 3
 - More expensive than Layer 2 switches but often more cost-effective than separate routers and switches.
 
 ### Practical Example
-![Multilayer Switch Topology](../images/multilayer-topology.png)
+![Multilayer Switch Topology](images/multilayer-topology.png)
 **Given**:
 
 **IP Address Range**:

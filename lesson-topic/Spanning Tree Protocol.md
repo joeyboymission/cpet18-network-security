@@ -255,7 +255,7 @@ All PCs are in VLAN 1 (default) and the same subnet (`192.168.100.0/24`), enabli
 ### Practical Example
 
 ### Scenario 1: Default Configuration
-![[scenario1-spanning.png]]
+![Spanning Scenario 1](images/scenario1-spanning.png)
 #### Setup
 
 - **Objective**: Demonstrate STP behavior with default settings, introducing `ATTACKER-A` (default priority 32768) without disrupting CIT as the root bridge.
@@ -414,7 +414,7 @@ interface fa0/1
 - `CIT# show spanning-tree vlan 1`: Root ID matches CIT’s MAC and Priority 32769.
 
 ### Scenario 2: Without Security
-![[scenario2-spanning.png]]
+![Spanning Scenario 2](images/scenario1-switchportsec.png)
 #### Setup
 
 - **Objective**: Show STP vulnerability when `ATTACKER-B` (priority 4096) hijacks the root bridge role.
@@ -574,7 +574,7 @@ interface fa0/1
 - `IRTC# show spanning-tree vlan 1`: Root ID shows ATTACKER-B’s MAC and Priority 4097.
 
 ### Scenario 3: Securing the Network
-![[scenario3-spanning.png]]
+![Spanning Scenario 3](images/scenario3-spanning.png)
 #### Setup
 
 - **Objective**: Prevent `ATTACKER-C1`, `ATTACKER-C2`, and `ATTACKER-C3` (each with priority 4096) from hijacking STP or disrupting the network, while ensuring connectivity between PC0, PC1, and PC2.
